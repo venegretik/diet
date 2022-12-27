@@ -224,13 +224,13 @@
             <h2>Выберите программу питания</h2>
             <div class="calculator">
                 <div class="calculator__nav__links">
-                    <div class="calculator__nav__link__item active__link">
+                    <div class="calculator__nav__link__item active__link" style="border-top-left-radius: 20px;" data-category="Классическое">
                         <p>Классическое</p>
                     </div>
-                    <div class="calculator__nav__link__item">
+                    <div class="calculator__nav__link__item" data-category="Морское">
                         <p>Морское</p>
                     </div>
-                    <div class="calculator__nav__link__item">
+                    <div class="calculator__nav__link__item" style="border-top-right-radius: 20px;" data-category="Без глютена и лактозы">
                         <p>Без глютена и лактозы</p>
                     </div>
                 </div>
@@ -238,78 +238,381 @@
                     <div class="calculatur__callory">
                         <div class="calculator__callory__day">
                             <p>Размер дневного рациона</p>
-                            <div class="calculatur__callory__buttons">
-                                <button class="calculator__button active__button__calculator">
+                            <div class="calculatur__callory__buttons" data-category="Классическое">
+                                <button class="calculator__button active__button__calculator" data-callorynumber="1200" data-belki="90" data-fats="55" data-carbohydrates="105">
                                     1 200 кКал
                                 </button>
-                                <button class="calculator__button">
+                                <button class="calculator__button" data-callorynumber="1500" data-belki="110" data-fats="65" data-carbohydrates="125">
                                     1 500 кКал
                                 </button>
-                                <button class="calculator__button">
+                                <button class="calculator__button" data-callorynumber="1800" data-belki="130" data-fats="70" data-carbohydrates="160">
+                                    1 800 кКал
+                                </button>
+                            </div>
+                            <div class="calculatur__callory__buttons" data-category="Морское" style="display: none;">
+                                <button class="calculator__button active__button__calculator" data-callorynumber="1200" data-belki="95" data-fats="50" data-carbohydrates="105">
+                                    1 200 кКал
+                                </button>
+                                <button class="calculator__button" data-callorynumber="1500" data-belki="110" data-fats="60" data-carbohydrates="125">
+                                    1 500 кКал
+                                </button>
+                                <button class="calculator__button" data-callorynumber="1800" data-belki="135" data-fats="70" data-carbohydrates="155">
+                                    1 800 кКал
+                                </button>
+                            </div>
+                            <div class="calculatur__callory__buttons" data-category="Без глютена и лактозы" style="display: none;">
+                                <button class="calculator__button active__button__calculator" data-callorynumber="1200" data-belki="90" data-fats="55" data-carbohydrates="105">
+                                    1 200 кКал
+                                </button>
+                                <button class="calculator__button" data-callorynumber="1500" data-belki="110" data-fats="65" data-carbohydrates="125">
+                                    1 500 кКал
+                                </button>
+                                <button class="calculator__button" data-callorynumber="1800" data-belki="125" data-fats="75" data-carbohydrates="155">
                                     1 800 кКал
                                 </button>
                             </div>
                         </div>
                         <div class="calculator__information">
                             <div class="calculator__information__item">
-                                <b>1200</b>
+                                <b class="callory__number">1200</b>
                                 <p>кКал</p>
                             </div>
                             <div class="calculator__information__item">
-                                <b>90</b>
+                                <b class="belki__number">90</b>
                                 <p>белки</p>
                             </div>
                             <div class="calculator__information__item">
-                                <b>55</b>
+                                <b class="fats__number">55</b>
                                 <p>жиры</p>
                             </div>
                             <div class="calculator__information__item">
-                                <b>105</b>
+                                <b class="carbohydrates__number">105</b>
                                 <p>углеводы</p>
                             </div>
                         </div>
                     </div>
                     <div class="calculator__set__time">
                         <p class="text__stile">Длительность программы доставки</p>
-                        <div class="calculator__time__picker">
-                            <div class="calculator__time__container">
-                                <button class="calculator__button active__button__calculator">
+                        <div class="calculator__time__picker" data-category="Классическое">
+                            <div class="calculator__time__container" data-callorynumber="1200">
+                                <button class="calculator__button active__button__calculator" data-dayzakaz="2" data-summ="1115">
                                     <b>2 дня</b>
                                     <p>(дегустация)</p>
                                 </button>
-                                <button class="calculator__button">
+                                <button class="calculator__button" data-dayzakaz="4" data-summ="1115">
                                     <b>4 дня</b>
                                     <p>1 115 ₽ / день</p>
                                 </button>
-                                <button class="calculator__button">
+                                <button class="calculator__button" data-dayzakaz="6" data-summ="1115">
                                     <b>6 дней</b>
                                     <p>1 115 ₽ / день</p>
                                 </button>
-                                <button class="calculator__button">
+                                <button class="calculator__button" data-dayzakaz="8" data-summ="1115">
                                     <b>8 дней</b>
                                     <p>1 115 ₽ / день</p>
                                 </button>
-                                <button class="calculator__button">
+                                <button class="calculator__button" data-dayzakaz="12" data-summ="1115">
                                     <b>12 дней</b>
                                     <p>1 115 ₽ / день</p>
                                 </button>
-                                <button class="calculator__button">
+                                <button class="calculator__button" data-dayzakaz="18" data-summ="1060">
                                     <b>18 дней</b>
                                     <p>1 060 ₽ / день</p>
                                 </button>
-                                <button class="calculator__button">
+                                <button class="calculator__button" data-dayzakaz="24" data-summ="1037">
                                     <b>24 дней</b>
                                     <p>1 037 ₽ / день</p>
                                 </button>
-                                <button class="calculator__button">
+                                <button class="calculator__button" data-dayZakaz="30" data-summ="1037">
                                     <b>30 дней</b>
                                     <p>1 037 ₽ / день</p>
+                                </button>
+                            </div>
+                            <div class="calculator__time__container" data-callorynumber="1500" style="display: none;">
+                                <button class="calculator__button active__button__calculator" data-dayzakaz="2" data-summ="1250">
+                                    <b>2 дня</b>
+                                    <p>(дегустация)</p>
+                                </button>
+                                <button class="calculator__button" data-dayzakaz="4" data-summ="1250">
+                                    <b>4 дня</b>
+                                    <p>1 250 ₽ / день</p>
+                                </button>
+                                <button class="calculator__button" data-dayzakaz="6" data-summ="1250">
+                                    <b>6 дней</b>
+                                    <p>1 250 ₽ / день</p>
+                                </button>
+                                <button class="calculator__button" data-dayzakaz="8" data-summ="1250">
+                                    <b>8 дней</b>
+                                    <p>1 250 ₽ / день</p>
+                                </button>
+                                <button class="calculator__button" data-dayzakaz="12" data-summ="1250">
+                                    <b>12 дней</b>
+                                    <p>1 250 ₽ / день</p>
+                                </button>
+                                <button class="calculator__button" data-dayzakaz="18" data-summ="1188">
+                                    <b>18 дней</b>
+                                    <p>1 188 ₽ / день</p>
+                                </button>
+                                <button class="calculator__button" data-dayzakaz="24" data-summ="1163">
+                                    <b>24 дней</b>
+                                    <p>1 163 ₽ / день</p>
+                                </button>
+                                <button class="calculator__button" data-dayZakaz="30" data-summ="1163">
+                                    <b>30 дней</b>
+                                    <p>1 163 ₽ / день</p>
+                                </button>
+                            </div>
+                            <div class="calculator__time__container" data-callorynumber="1800" style="display: none;">
+                                <button class="calculator__button active__button__calculator" data-dayzakaz="2" data-summ="1316">
+                                    <b>2 дня</b>
+                                    <p>(дегустация)</p>
+                                </button>
+                                <button class="calculator__button" data-dayzakaz="4" data-summ="1316">
+                                    <b>4 дня</b>
+                                    <p>1 316 ₽ / день</p>
+                                </button>
+                                <button class="calculator__button" data-dayzakaz="6" data-summ="1316">
+                                    <b>6 дней</b>
+                                    <p>1 316 ₽ / день</p>
+                                </button>
+                                <button class="calculator__button" data-dayzakaz="8" data-summ="1316">
+                                    <b>8 дней</b>
+                                    <p>1 316 ₽ / день</p>
+                                </button>
+                                <button class="calculator__button" data-dayzakaz="12" data-summ="1316">
+                                    <b>12 дней</b>
+                                    <p>1 316 ₽ / день</p>
+                                </button>
+                                <button class="calculator__button" data-dayzakaz="18" data-summ="1251">
+                                    <b>18 дней</b>
+                                    <p>1 251 ₽ / день</p>
+                                </button>
+                                <button class="calculator__button" data-dayzakaz="24" data-summ="1224">
+                                    <b>24 дней</b>
+                                    <p>1 224 ₽ / день</p>
+                                </button>
+                                <button class="calculator__button" data-dayZakaz="30" data-summ="1224">
+                                    <b>30 дней</b>
+                                    <p>1 224 ₽ / день</p>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="calculator__time__picker" data-category="Морское" style="display: none;">
+                            <div class="calculator__time__container" data-callorynumber="1200">
+                                <button class="calculator__button active__button__calculator" data-dayzakaz="2" data-summ="1300">
+                                    <b>2 дня</b>
+                                    <p>(дегустация)</p>
+                                </button>
+                                <button class="calculator__button" data-dayzakaz="4" data-summ="1300">
+                                    <b>4 дня</b>
+                                    <p>1 300 ₽ / день</p>
+                                </button>
+                                <button class="calculator__button" data-dayzakaz="6" data-summ="1300">
+                                    <b>6 дней</b>
+                                    <p>1 300 ₽ / день</p>
+                                </button>
+                                <button class="calculator__button" data-dayzakaz="8" data-summ="1300">
+                                    <b>8 дней</b>
+                                    <p>1 300 ₽ / день</p>
+                                </button>
+                                <button class="calculator__button" data-dayzakaz="12" data-summ="1300">
+                                    <b>12 дней</b>
+                                    <p>1 300 ₽ / день</p>
+                                </button>
+                                <button class="calculator__button" data-dayzakaz="18" data-summ="1235">
+                                    <b>18 дней</b>
+                                    <p>1 235 ₽ / день</p>
+                                </button>
+                                <button class="calculator__button" data-dayzakaz="24" data-summ="1209">
+                                    <b>24 дней</b>
+                                    <p>1 209 ₽ / день</p>
+                                </button>
+                                <button class="calculator__button" data-dayZakaz="30" data-summ="1209">
+                                    <b>30 дней</b>
+                                    <p>1 209 ₽ / день</p>
+                                </button>
+                            </div>
+                            <div class="calculator__time__container" data-callorynumber="1500" style="display: none;">
+                                <button class="calculator__button active__button__calculator" data-dayzakaz="2" data-summ="1400">
+                                    <b>2 дня</b>
+                                    <p>(дегустация)</p>
+                                </button>
+                                <button class="calculator__button" data-dayzakaz="4" data-summ="1400">
+                                    <b>4 дня</b>
+                                    <p>1 400 ₽ / день</p>
+                                </button>
+                                <button class="calculator__button" data-dayzakaz="6" data-summ="1400">
+                                    <b>6 дней</b>
+                                    <p>1 400 ₽ / день</p>
+                                </button>
+                                <button class="calculator__button" data-dayzakaz="8" data-summ="1400">
+                                    <b>8 дней</b>
+                                    <p>1 400 ₽ / день</p>
+                                </button>
+                                <button class="calculator__button" data-dayzakaz="12" data-summ="1400">
+                                    <b>12 дней</b>
+                                    <p>1 400 ₽ / день</p>
+                                </button>
+                                <button class="calculator__button" data-dayzakaz="18" data-summ="1330">
+                                    <b>18 дней</b>
+                                    <p>1 330 ₽ / день</p>
+                                </button>
+                                <button class="calculator__button" data-dayzakaz="24" data-summ="1302">
+                                    <b>24 дней</b>
+                                    <p>1 302 ₽ / день</p>
+                                </button>
+                                <button class="calculator__button" data-dayZakaz="30" data-summ="1302">
+                                    <b>30 дней</b>
+                                    <p>1 302 ₽ / день</p>
+                                </button>
+                            </div>
+                            <div class="calculator__time__container" data-callorynumber="1800" style="display: none;">
+                                <button class="calculator__button active__button__calculator" data-dayzakaz="2" data-summ="1500">
+                                    <b>2 дня</b>
+                                    <p>(дегустация)</p>
+                                </button>
+                                <button class="calculator__button" data-dayzakaz="4" data-summ="1500">
+                                    <b>4 дня</b>
+                                    <p>1 500 ₽ / день</p>
+                                </button>
+                                <button class="calculator__button" data-dayzakaz="6" data-summ="1500">
+                                    <b>6 дней</b>
+                                    <p>1 500 ₽ / день</p>
+                                </button>
+                                <button class="calculator__button" data-dayzakaz="8" data-summ="1500">
+                                    <b>8 дней</b>
+                                    <p>1 500 ₽ / день</p>
+                                </button>
+                                <button class="calculator__button" data-dayzakaz="12" data-summ="1500">
+                                    <b>12 дней</b>
+                                    <p>1 500 ₽ / день</p>
+                                </button>
+                                <button class="calculator__button" data-dayzakaz="18" data-summ="1425">
+                                    <b>18 дней</b>
+                                    <p>1 425 ₽ / день</p>
+                                </button>
+                                <button class="calculator__button" data-dayzakaz="24" data-summ="1395">
+                                    <b>24 дней</b>
+                                    <p>1 395 ₽ / день</p>
+                                </button>
+                                <button class="calculator__button" data-dayZakaz="30" data-summ="1395">
+                                    <b>30 дней</b>
+                                    <p>1 395 ₽ / день</p>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="calculator__time__picker" data-category="Без глютена и лактозы" style="display: none;">
+                            <div class="calculator__time__container" data-callorynumber="1200">
+                                <button class="calculator__button active__button__calculator" data-dayzakaz="2" data-summ="1500">
+                                    <b>2 дня</b>
+                                    <p>(дегустация)</p>
+                                </button>
+                                <button class="calculator__button" data-dayzakaz="4" data-summ="1500">
+                                    <b>4 дня</b>
+                                    <p>1 500 ₽ / день</p>
+                                </button>
+                                <button class="calculator__button" data-dayzakaz="6" data-summ="1500">
+                                    <b>6 дней</b>
+                                    <p>1 500 ₽ / день</p>
+                                </button>
+                                <button class="calculator__button" data-dayzakaz="8" data-summ="1500">
+                                    <b>8 дней</b>
+                                    <p>1 500 ₽ / день</p>
+                                </button>
+                                <button class="calculator__button" data-dayzakaz="12" data-summ="1500">
+                                    <b>12 дней</b>
+                                    <p>1 500 ₽ / день</p>
+                                </button>
+                                <button class="calculator__button" data-dayzakaz="18" data-summ="1425">
+                                    <b>18 дней</b>
+                                    <p>1 425 ₽ / день</p>
+                                </button>
+                                <button class="calculator__button" data-dayzakaz="24" data-summ="1395">
+                                    <b>24 дней</b>
+                                    <p>1 395 ₽ / день</p>
+                                </button>
+                                <button class="calculator__button" data-dayZakaz="30" data-summ="1395">
+                                    <b>30 дней</b>
+                                    <p>1 395 ₽ / день</p>
+                                </button>
+                            </div>
+                            <div class="calculator__time__container" data-callorynumber="1500" style="display: none;">
+                                <button class="calculator__button active__button__calculator" data-dayzakaz="2" data-summ="1250">
+                                    <b>2 дня</b>
+                                    <p>(дегустация)</p>
+                                </button>
+                                <button class="calculator__button" data-dayzakaz="4" data-summ="1600">
+                                    <b>4 дня</b>
+                                    <p>1 600 ₽ / день</p>
+                                </button>
+                                <button class="calculator__button" data-dayzakaz="6" data-summ="1600">
+                                    <b>6 дней</b>
+                                    <p>1 600 ₽ / день</p>
+                                </button>
+                                <button class="calculator__button" data-dayzakaz="8" data-summ="1600">
+                                    <b>8 дней</b>
+                                    <p>1 600 ₽ / день</p>
+                                </button>
+                                <button class="calculator__button" data-dayzakaz="12" data-summ="1600">
+                                    <b>12 дней</b>
+                                    <p>1 600 ₽ / день</p>
+                                </button>
+                                <button class="calculator__button" data-dayzakaz="18" data-summ="1520">
+                                    <b>18 дней</b>
+                                    <p>1 520 ₽ / день</p>
+                                </button>
+                                <button class="calculator__button" data-dayzakaz="24" data-summ="1488">
+                                    <b>24 дней</b>
+                                    <p>1 488 ₽ / день</p>
+                                </button>
+                                <button class="calculator__button" data-dayZakaz="30" data-summ="1488">
+                                    <b>30 дней</b>
+                                    <p>1 488 ₽ / день</p>
+                                </button>
+                            </div>
+                            <div class="calculator__time__container" data-callorynumber="1800" style="display: none;">
+                                <button class="calculator__button active__button__calculator" data-dayzakaz="2" data-summ="1700">
+                                    <b>2 дня</b>
+                                    <p>(дегустация)</p>
+                                </button>
+                                <button class="calculator__button" data-dayzakaz="4" data-summ="1700">
+                                    <b>4 дня</b>
+                                    <p>1 700 ₽ / день</p>
+                                </button>
+                                <button class="calculator__button" data-dayzakaz="6" data-summ="1700">
+                                    <b>6 дней</b>
+                                    <p>1 700 ₽ / день</p>
+                                </button>
+                                <button class="calculator__button" data-dayzakaz="8" data-summ="1700">
+                                    <b>8 дней</b>
+                                    <p>1 700 ₽ / день</p>
+                                </button>
+                                <button class="calculator__button" data-dayzakaz="12" data-summ="1700">
+                                    <b>12 дней</b>
+                                    <p>1 700 ₽ / день</p>
+                                </button>
+                                <button class="calculator__button" data-dayzakaz="18" data-summ="1615">
+                                    <b>18 дней</b>
+                                    <p>1 615 ₽ / день</p>
+                                </button>
+                                <button class="calculator__button" data-dayzakaz="24" data-summ="1581">
+                                    <b>24 дней</b>
+                                    <p>1 581 ₽ / день</p>
+                                </button>
+                                <button class="calculator__button" data-dayZakaz="30" data-summ="1581">
+                                    <b>30 дней</b>
+                                    <p>1 581 ₽ / день</p>
                                 </button>
                             </div>
                         </div>
                     </div>
                     <div class="calculator__menu__items">
                         <p>Пример меню на день</p>
+                        <div class="calculator__menu__sum">
+                            <b>Сумма :</b>
+                            <b class="summ__tovar"> 2 230 </b>
+                            <b>₽</b>
+                        </div>
                         <div class="calculator__chose__date__container">
                             <div class="calculator__chose__date">
                                 <div class="calculator__menu__icon">
@@ -549,54 +852,286 @@
                 </div>
             </div>
         </div>
+        <div class="block__info">
+            <div class="block__info__content">
+                <h2>
+                    Попробуй сегодня!
+                </h2>
+                <p>
+                    При оформлении заказа до 15:00 текущего дня мы приготовим дегустационный набор из 4-х блюд и
+                    доставим
+                    вам его в день заказа с 22:00 до 23:00!
+                </p>
+                <p>Оплата заказа производится картой, онлайн при оформлении заказа или при получении заказа.</p>
+                <div class="block__info__content__button">
+                    <b>за 1 590р.</b>
+                    <button>
+                        Заказать до 15:00!
+                    </button>
+                </div>
+            </div>
+            <div class="image__block__info">
+                <figure class="figure left-content__img">
+                    <img class="img" src="https://skinny-zucchini.com/wp-content/uploads/2022/01/img-1-150x150.png"
+                        srcset="https://skinny-zucchini.com/wp-content/uploads/2022/01/img-1.png 560w, https://skinny-zucchini.com/wp-content/uploads/2022/01/img-1-275x300.png 275w"
+                        alt="Попробуй сегодня!" loading="lazy">
+                </figure>
+            </div>
+        </div>
+
+        <div class="block__info block__info__reverse" style="flex-direction:row-reverse;">
+            <div class="block__info__content">
+                <h2>
+                    Доставка рационов
+                </h2>
+                <p>
+                    Доставка осуществляется раз в 2 дня с 21:00 до 23:00, каждый вторник, четверг и воскресение. Поэтому
+                    получается что выпадает один день питания - воскресение. Этот день мы рекомендуем посветить походам
+                    в ресторан или заслуженному отдыху!
+                </p>
+                <p>Вы можете поделиться с нами пожеланиями связанные с питанием, мы вас выслушаем, и предложим возможный
+                    вариант, который скорее всего закроет этот вопрос.</p>
+            </div>
+            <div class="image__block__info">
+                <figure class="figure right-content__img">
+                    <img class="img"
+                        src="https://skinny-zucchini.com/wp-content/uploads/2021/11/skinny_recipe-1080-x-800-px-e1643593421744-150x150.png"
+                        srcset="https://skinny-zucchini.com/wp-content/uploads/2021/11/skinny_recipe-1080-x-800-px-e1643593421744.png 1358w, https://skinny-zucchini.com/wp-content/uploads/2021/11/skinny_recipe-1080-x-800-px-e1643593421744-300x277.png 300w, https://skinny-zucchini.com/wp-content/uploads/2021/11/skinny_recipe-1080-x-800-px-e1643593421744-1024x947.png 1024w, https://skinny-zucchini.com/wp-content/uploads/2021/11/skinny_recipe-1080-x-800-px-e1643593421744-768x710.png 768w"
+                        alt="Попробуй сегодня!" loading="lazy">
+                </figure>
+            </div>
+        </div>
+        <div class="reviews__slider">
+            <div class="reviews__slider__title">
+                <h2>Отзывы наших клиентов</h2>
+                <svg xmlns="http://www.w3.org/2000/svg" width="46" height="34" viewBox="0 0 46 34" fill="none">
+                    <path
+                        d="M19.575 8.472c.153 3.012-3.51 11.521-10.99 25.528H0l8.128-18.525c-3.587-1.13-5.38-3.577-5.38-7.342 0-2.41.8-4.368 2.403-5.874C6.754.753 8.738 0 11.104 0c2.213 0 4.16.678 5.838 2.033 1.756 1.28 2.633 3.427 2.633 6.439zm26.42 0c.153 3.012-3.51 11.521-10.99 25.528H26.42l8.128-18.525c-3.587-1.13-5.38-3.577-5.38-7.342 0-2.41.8-4.368 2.404-5.874C33.174.753 35.158 0 37.524 0c2.213 0 4.16.678 5.838 2.033 1.756 1.28 2.633 3.427 2.633 6.439z"
+                        fill="#32BF5D" />
+                    <script xmlns="" />
+                </svg>
+            </div>
+            <div class="reviews__slider__content swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide review__cart">
+                        <div class="row__info__reviewer">
+                            <figure class="figure review__author-img">
+                                <img class="img"
+                                    src="https://skinny-zucchini.com/wp-content/uploads/2021/10/skinny_recipe-9.png"
+                                    alt="Виктория. Предприниматель.">
+                            </figure>
+                            <div class="row__info__reviewer__content">
+                                <b>Виктория. Предприниматель.</b>
+                                <p>Control: 1 400 Ккал</p>
+                                <div class="star__review stars-5">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review__text">
+                            <p>
+
+                                Хочу поделиться положительными впечатлениями о данной компании доставки еды. Нашла
+                                Skinny Zucchini - сделала заказ дегустационного набора и в тот же день получила
+                                доставку. Сама еда в эко боксах на бумажной основе, крышки из перерабатываемого
+                                пластика, как и бутылки с напитками. Что не может не радовать людей думающих об
+                                экологии. Доставка раз в 2 дня. Все свежее, визуально эстетичное, и - ооочень вкусное.
+                                Получается, что за 2 дня ты кушаешь 10 разных блюд. Все так же красиво и вкусно как на
+                                фотографиях на сайте. Каждый следующий приём ждёшь с радостью, зная что будешь кушать
+                                вкусняшку. И, худеть) Я - очень довольна выбором этой компании.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide review__cart">
+                        <div class="row__info__reviewer">
+                            <figure class="figure review__author-img">
+                                <img class="img"
+                                    src="https://skinny-zucchini.com/wp-content/uploads/2021/10/skinny_recipe-9.png"
+                                    alt="Виктория. Предприниматель.">
+                            </figure>
+                            <div class="row__info__reviewer__content">
+                                <b>Виктория. Предприниматель.</b>
+                                <p>Control: 1 400 Ккал</p>
+                                <div class="star__review stars-5">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review__text">
+                            <p>
+
+                                Хочу поделиться положительными впечатлениями о данной компании доставки еды. Нашла
+                                Skinny Zucchini - сделала заказ дегустационного набора и в тот же день получила
+                                доставку. Сама еда в эко боксах на бумажной основе, крышки из перерабатываемого
+                                пластика, как и бутылки с напитками. Что не может не радовать людей думающих об
+                                экологии. Доставка раз в 2 дня. Все свежее, визуально эстетичное, и - ооочень вкусное.
+                                Получается, что за 2 дня ты кушаешь 10 разных блюд. Все так же красиво и вкусно как на
+                                фотографиях на сайте. Каждый следующий приём ждёшь с радостью, зная что будешь кушать
+                                вкусняшку. И, худеть) Я - очень довольна выбором этой компании.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+
+        <div class="block__info">
+            <div class="block__info__content">
+                <h2>
+                    Доставка рационов
+                </h2>
+                <p>
+                    Доставка осуществляется раз в 2 дня с 21:00 до 23:00, каждый вторник, четверг и воскресение. Поэтому
+                    получается что выпадает один день питания - воскресение. Этот день мы рекомендуем посветить походам
+                    в ресторан или заслуженному отдыху!
+                </p>
+                <p>Вы можете поделиться с нами пожеланиями связанные с питанием, мы вас выслушаем, и предложим возможный
+                    вариант, который скорее всего закроет этот вопрос.</p>
+            </div>
+            <div class="image__block__info">
+                <figure class="figure left-content__img">
+                    <img class="img"
+                        src="https://skinny-zucchini.com/wp-content/uploads/2021/11/5-e1638046568115-150x150.png"
+                        srcset="https://skinny-zucchini.com/wp-content/uploads/2021/11/5-e1638046568115.png 531w, https://skinny-zucchini.com/wp-content/uploads/2021/11/5-e1638046568115-300x293.png 300w"
+                        alt="Индивидуальное меню" loading="lazy">
+                </figure>
+            </div>
+        </div>
+
+        <div class="programm__information__full">
+            <h2>
+                Что включает программа
+            </h2>
+            <div class="program__information__list">
+                <div class="program__information__item">
+                    <h3>Бесплатная доставка</h3>
+                    <p>
+                        Три раза в неделю с 21:00 до 22:00.
+                        По городу и + 5 км от КАД бесплатно.
+                        6 - 30 км — 35 ₽ за каждый км от КАД.
+                        г. Санкт-Петербург
+                    </p>
+                </div>
+                <div class="program__information__item">
+                    <h3>Персональный менеджер</h3>
+                    <p>
+                        Ведем вас с первых дней, помогаем советами и отвечаем на вопросы, связанные с питанием.
+                        Консультации диетолога и бренд-шефа.
+                    </p>
+                </div>
+                <div class="program__information__item">
+                    <h3>Всё необходимое</h3>
+                    <p>
+                        Удобная и экологичная упаковка, одноразовые столовые приборы, салфетки, зубочистки и бутылка
+                        витаминизированного напитка.
+                    </p>
+                </div>
+            </div>
+            <div class="payment__information">
+                <div class="payment__information__full">
+                    <div class="payment__information__item">
+                        <img src="./img/payment-icon.svg" />
+                        <p>
+                            Оплачивайте
+                            наличными
+                        </p>
+                    </div>
+                    <div class="payment__information__item">
+                        <img src="./img/payment-icon2.svg" />
+                        <p>
+                            Банковской
+                            картой
+                        </p>
+                    </div>
+                    <div class="payment__information__item">
+                        <img src="./img/payment-icon3.svg" />
+                        <p>
+                            Безналичным
+                            переводом
+                        </p>
+                    </div>
+                    <div class="payment__information__item">
+                        <img src="./img/payment-icon4.svg" />
+                        <p>
+                            Онлайн
+                            платежом
+                        </p>
+                    </div>
+                </div>
+                <div class="payment__form__button">
+                    <p>Заказ рациона по телефону:</p>
+                    <h3>+7 (950) 704-70-70</h3>
+                    <button>Оформить онлайн-заказ</button>
+                </div>
+            </div>
+        </div>
+        <div class="quetions__list">
+            <h2>Ответы на вопросы</h2>
+            <div class="quetions__items">
+                <div class="quetions_item active__quetion">
+                    <img src="./img/quetion-icon.svg"/>
+                    <p>Управление подпиской</p>
+                </div>
+                <div class="quetions_item">
+                    <img src="./img/quetion-icon2.svg"/>
+                    <p>Управление подпиской</p>
+                </div>
+                <div class="quetions_item">
+                    <img src="./img/quetion-icon3.svg"/>
+                    <p>Управление подпиской</p>
+                </div>
+                <div class="quetions_item">
+                    <img src="./img/quetion-icon4.svg"/>
+                    <p>Управление подпиской</p>
+                </div>
+                <div class="quetions_item">
+                    <img src="./img/quetion-icon5.svg"/>
+                    <p>Управление подпиской</p>
+                </div>
+            </div>
+            <div class="quetions__list__text">
+                <div class="quetions__list__text__item">
+                    <div class="quetions__list__text__content">
+                       <div class="quetions__list__text__header">
+                            <b>Кому подходит SKINNY ZUCCHINI?</b>
+                            <figure class="ico ico--mx spoiler-ico">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 12H4" stroke="#32BF5D" stroke-linecap="round"></path>
+                                    <path d="M12 4V20" stroke="#32BF5D" stroke-linecap="round"></path>
+                                </svg>
+                            </figure>
+                       </div> 
+                       <div class="quetions__text__hidden" style="display: none;">
+                            <p>
+                                Программам здорового питания следуют люди разных профессий, положений в обществе, возрастов. Часто заказывают SKINNY ZUCCHINI для всей семьи. Последователей компании объединяет одна главная цель: стремление к здоровому образу жизни и экономии времени. SKINNY ZUCCHINI для этого — лучшее решение!
+                            </p>
+                       </div>
+                    </div>
+                    <div class="quetions__list__text__content">
+                       <div class="quetions__list__text__header">
+                            <b>Как выбрать подходящую калорийность?</b>
+                            <figure class="ico ico--mx spoiler-ico">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 12H4" stroke="#32BF5D" stroke-linecap="round"></path>
+                                    <path d="M12 4V20" stroke="#32BF5D" stroke-linecap="round"></path>
+                                </svg>
+                            </figure>
+                       </div> 
+                       <div class="quetions__text__hidden" style="display: none;">
+                            <p>
+                                В выборе поможет менеджер SKINNY ZUCCHINI. Но наиболее эффективный способ заказать по одному дню из 2х - 3х вариантов калорийности. Вы попробуете каждый день, и поймёте какой рацион для вас наиболее комфортный. Мы сможем скорректировать его с учетом ваших предпочтений, привычек в питании и возможных пищевых непереносимостей.
+                            </p>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
     <footer></footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script>
-        new Swiper('.calculator__items__food', {
-            slidesPerView: 1,
-            navigation: {
-                nextEl: '.right-arrow',
-                prevEl: '.left-arrow',
-            },
-            breakpoints: {
-                768: {
-                    slidesPerView: 3.2
-                },
-                580:{
-                    slidesPerView: 2
-                }
-            }
-        });
-        /*Изменение слайдера*/
-        $('.calculator__chose__date__item').click(function () {
-            $('.calculator__chose__date__item').removeClass('active__date__chose');
-            $(this).addClass('active__date__chose');
-            let day = $(this).data('day');
-            $('.calculator__items__day').each(function (i) {
-                if ($(this).data('day') == day) {
-                    $('.calculator__items__day').css({ 'display': 'none' });
-                    $(this).css({ 'display': 'flex' });
-                }
-            });
-        });
-        /*Рацион на сколько дней*/
-        $('.calculator__time__container .calculator__button').click(function () {
-            $('.calculator__time__container .calculator__button').removeClass('active__button__calculator');
-            $(this).addClass('active__button__calculator');
-        });
-
-        /*Клик на кнопку с калориями*/
-        $('.calculatur__callory__buttons .calculator__button').click(function () {
-            $('.calculatur__callory__buttons .calculator__button').removeClass('active__button__calculator');
-            $(this).addClass('active__button__calculator');
-        });
-        /*calculator__items__day*/
-        $('.calculator__nav__link__item').click(function () {
-            $('.calculator__nav__link__item').removeClass('active__link');
-            $(this).addClass('active__link');
-        });
+    <script src="./js/main.js">
     </script>
 </body>
 
