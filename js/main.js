@@ -1432,12 +1432,12 @@ $('.quetions__list__text__header').click(function () {
     if ($(this).parent().find('.quetions__text__hidden').css('display') == 'block') {
         $(this).parent().find('.quetions__text__hidden').fadeOut(300);
         $(this).removeClass('quetions__active');
-        $('.ico').removeClass('ico__active');
+        $(this).find('.ico').removeClass('ico__active');
     }
     else {
         $(this).parent().find('.quetions__text__hidden').fadeIn(300);
         $(this).addClass('quetions__active');
-        $('.ico').addClass('ico__active');
+        $(this).find('.ico').addClass('ico__active');
     }
 });
 
