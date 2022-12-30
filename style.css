@@ -59,7 +59,12 @@
 .telephone__header svg:hover path {
     fill: #fff;
 }
-
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    max-width: 1280px;
+    margin: 0px auto;
+}
 .title__menu__content p {
     font-size: 20px;
     max-width: 900px;
@@ -549,7 +554,9 @@ body {
 }
 
 .calculator__items__food__single img {
-    width: 100%;
+    max-width: 100%;
+    margin: 0px auto;
+    object-fit: cover;
     height: 80%;
 }
 
@@ -1430,6 +1437,7 @@ b {
 }
 
 @media(max-width:580px) {
+
     .modal__form {
         background-image: none;
     }
