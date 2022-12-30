@@ -102,19 +102,6 @@ body {
     position: relative;
 }
 
-header::after {
-    background-image: url(./img/bg-food.png);
-    content: "";
-    width: 800px;
-    height: 100%;
-    z-index: -1;
-    position: absolute;
-    right: 0%;
-    top: 5%;
-    background-position: 100%;
-    background-repeat: no-repeat;
-    background-size: 80%;
-}
 
 .title__menu__content {
     margin-top: 20px;
