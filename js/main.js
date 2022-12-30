@@ -1247,6 +1247,12 @@ $('.header__menu-button').click(function(){
         $('.header__menu__mobile').css({'visibility':'hidden','opacity':'0'})
     }
 });
+new Swiper('.title__menu__container',{
+    slidesPerView: 1,
+    autoplay: {
+        delay: 2000,
+      },
+})
 new Swiper('.calculator__items__food', {
     slidesPerView: 1,
     spaceBetween: 10,
@@ -1275,6 +1281,9 @@ return false;
 });
 new Swiper('.reviews__slider__content', {
     slidesPerView: 1,
+    autoplay: {
+        delay: 2000,
+      },
     pagination: {
         el: '.swiper-pagination',
     },

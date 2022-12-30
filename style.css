@@ -70,7 +70,7 @@ header {
 
 .title__menu__content p {
     font-size: 20px;
-    max-width: 300px;
+    max-width: 900px;
     padding-bottom: 60px;
     font-weight: 500;
 }
@@ -111,11 +111,11 @@ body {
 }
 
 header::after {
-    background-image: url("./img/bg-food.png");
+    background-image: url(./img/bg-food.png);
     content: "";
     width: 800px;
     height: 100%;
-    z-index: 2;
+    z-index: -1;
     position: absolute;
     right: 0%;
     top: 5%;
@@ -125,22 +125,19 @@ header::after {
 }
 
 .title__menu__content {
-    max-width: 600px;
     margin-top: 20px;
     padding-left: 40px;
 }
 
 .title__menu__content h1 {
     padding-bottom: 40px;
-    font-size: 60px;
+    font-size: 30px;
     font-weight: 700;
     line-height: 1.1;
 }
-
-.top__margin {
-    margin-top: -110px;
+.title__menu__container{
+    overflow: hidden;
 }
-
 .icons__menu__block {
     padding: 40px 10px;
     display: flex;
@@ -346,7 +343,8 @@ header::after {
 
 .review__cart {
     display: flex;
-    column-gap: 70px;
+    column-gap: 1%;
+    flex-wrap: nowrap;
 }
 
 .calculator__time__container {
@@ -407,7 +405,15 @@ header::after {
 .active__date__chose {
     color: #30BA6B;
 }
-
+.review__cart img{
+    width: 24%;
+}   
+.review__cart img{
+    max-height: 600px;
+}
+.calculator__chose__date__item{
+    cursor: pointer;
+}
 .calculator__chose__date__container {
     display: flex;
     flex-wrap: wrap;
@@ -1233,10 +1239,6 @@ b {
 
     .program__information__item {
         flex-basis: 49%;
-    }
-
-    .review__cart {
-        flex-direction: column;
     }
 
     .review__text {
