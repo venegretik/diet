@@ -7,14 +7,6 @@
     outline: 0px;
 }
 
-header {
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    background: none;
-    background: url('./img/bg-title.jpg');
-}
-
 .logo__header img {
     width: 130px;
 }
@@ -135,9 +127,11 @@ header::after {
     font-weight: 700;
     line-height: 1.1;
 }
-.title__menu__container{
+
+.title__menu__container {
     overflow: hidden;
 }
+
 .icons__menu__block {
     padding: 40px 10px;
     display: flex;
@@ -405,15 +399,152 @@ header::after {
 .active__date__chose {
     color: #30BA6B;
 }
-.review__cart img{
+
+.review__cart img {
     width: 24%;
-}   
-.review__cart img{
+}
+
+.review__cart img {
     max-height: 600px;
 }
-.calculator__chose__date__item{
+
+.calculator__chose__date__item {
     cursor: pointer;
 }
+
+.cart-contents {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-text-size-adjust: 100%;
+    --swiper-navigation-size: 44px;
+    --swiper-theme-color: #007aff;
+    word-wrap: break-word;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif !important;
+    text-decoration: none;
+    color: #343941 !important;
+    position: relative;
+    height: auto;
+    width: auto;
+    text-indent: 0;
+    display: block;
+    border-radius: 50px;
+    margin-left: auto;
+    background-color: #FF6501 !important;
+    max-width: max-content;
+    padding: 14px 15px !important;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 130%;
+    text-align: center;
+}
+
+.cart-contents::before {
+    font-family: font-pizzaro;
+    content: "\47";
+    display: inline-block;
+    vertical-align: middle;
+    content: ' ';
+    background-image: url(img/cart.svg);
+    background-size: contain;
+    padding: 10px !important;
+    background-repeat: no-repeat;
+}
+
+.cart-contents .count {
+    display: block;
+    position: absolute;
+    min-width: 19px;
+    min-height: 19px;
+    top: -9px;
+    right: 6px;
+    background-color: #FFE600;
+    text-align: center;
+    border-radius: 100%;
+    color: #000;
+    font-family: Tahoma;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+}
+
+.header-v1 .site-header-cart .cart-contents .amount {
+    margin-right: 0;
+    font-family: Tahoma;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 130%;
+    color: #FFFFFF;
+}
+
+.button__purcase {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 16px;
+    gap: 4px;
+    background: #FF6501;
+    color: #fff;
+    font-size: 14px;
+    max-width: 134px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.checkbox__purcase {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    align-items: flex-end;
+    min-height: 20px;
+    padding-left: 20px;
+    margin-bottom: 0;
+}
+
+.custom-checkbox+label::before {
+    content: '';
+    display: inline-block;
+    width: 1.3em;
+    height: 1.3em;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 2px solid #000000;
+    /* border-radius: 0.25em; */
+    margin-right: 0.5em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+}
+
+#auto-pay {
+    opacity: -1;
+    display: none;
+}
+
+.custom-checkbox:checked+label::before {
+    border-color: #000;
+    background-color: #fff;
+    background-image: url(img/checked.svg);
+    background-size: contain;
+}
+
+.basket-top-buttons_chbox_contener .auto-pay-conteiner label {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    align-items: flex-end;
+}
+
 .calculator__chose__date__container {
     display: flex;
     flex-wrap: wrap;
@@ -756,9 +887,11 @@ b {
 .quetions__list__text__header:hover path {
     stroke: #fff;
 }
-.quetions__list__text__header figure{
+
+.quetions__list__text__header figure {
     transition: 0.5s;
 }
+
 .ico__active {
     color: #fff;
     -webkit-transform: rotate(135deg);
@@ -852,6 +985,15 @@ b {
 }
 
 .header__menu-button {
+    display: none;
+}
+
+.menu-toggle,
+.price-label {
+    display: none !important;
+}
+
+.cart-contents .amount {
     display: none;
 }
 
@@ -1052,6 +1194,7 @@ b {
         transition: 0.5s;
         align-items: center;
         top: 120.52px;
+        z-index: 999;
         bottom: 0px;
         left: 0px;
         right: 0px;
@@ -1250,6 +1393,7 @@ b {
     .calculator__information {
         width: 66%;
     }
+
 
     .icons__menu__block {
         flex-wrap: wrap;
