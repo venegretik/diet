@@ -993,6 +993,7 @@ b {
 
 .header__row__contact {
     display: flex;
+    align-items: center;
     column-gap: 15px;
 }
 
