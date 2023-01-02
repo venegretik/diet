@@ -1153,7 +1153,9 @@ b {
     resize: none;
     font-size: 16px;
 }
-
+.header__row__contact .cart-contents{
+    margin-top: 0px!important;
+}
 .modal__form form button {
     width: 100%;
     padding: 20px;
@@ -1173,7 +1175,10 @@ b {
     .header__top nav {
         display: none;
     }
-
+    .header__row__contact > .cart-contents{
+        margin-top: 0px!important;
+        display: none;
+    }
     footer .social__links__mobile {
         margin-bottom: 0px;
     }
