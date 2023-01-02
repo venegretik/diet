@@ -1153,6 +1153,14 @@ b {
     resize: none;
     font-size: 16px;
 }
+.title__menu__content{
+    display:flex;
+    justify-content:center;
+}
+.title__menu__content img{
+    max-height:400px;
+    margin:0px auto;
+}
 .header__row__contact .cart-contents{
     margin-top: 0px!important;
 }
