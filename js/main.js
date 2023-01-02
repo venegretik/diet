@@ -1261,8 +1261,11 @@ new Swiper('.calculator__items__food', {
         prevEl: '.left-arrow',
     },
     breakpoints: {
-        768: {
+        968: {
             slidesPerView: 4
+        },
+        768: {
+            slidesPerView: 3
         },
         580: {
             slidesPerView: 2
@@ -1287,6 +1290,11 @@ new Swiper('.reviews__slider__content', {
     pagination: {
         el: '.swiper-pagination',
     },
+    breakpoints: {
+        768: {
+            slidesPerView: 2
+        }
+    }
 });
 $('.modal__open').click(function(){
     $('.modal__container').css({'display':'flex'});
