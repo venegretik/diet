@@ -1250,7 +1250,7 @@ $('.header__menu-button').click(function(){
 new Swiper('.title__menu__container',{
     slidesPerView: 1,
     autoplay: {
-        delay: 2000,
+        delay: 4000,
       },
 })
 new Swiper('.calculator__items__food', {
