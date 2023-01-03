@@ -1237,22 +1237,22 @@ let array = {
         }
     },
 }
-$('.header__menu-button').click(function(){
-    if($('.header__menu__mobile').css('visibility') == 'hidden'){
+$('.header__menu-button').click(function () {
+    if ($('.header__menu__mobile').css('visibility') == 'hidden') {
         $(this).addClass('active');
-        $('.header__menu__mobile').css({'visibility':'visible','opacity':'1'})
+        $('.header__menu__mobile').css({ 'visibility': 'visible', 'opacity': '1' })
     }
-    else{
+    else {
         $(this).removeClass('active');
-        $('.header__menu__mobile').css({'visibility':'hidden','opacity':'0'})
+        $('.header__menu__mobile').css({ 'visibility': 'hidden', 'opacity': '0' })
     }
 });
-new Swiper('.title__menu__container',{
+new Swiper('.title__menu__container', {
     slidesPerView: 1,
     loop: true,
     autoplay: {
         delay: 4000,
-      },
+    },
 })
 new Swiper('.calculator__items__food', {
     slidesPerView: 1,
@@ -1273,21 +1273,21 @@ new Swiper('.calculator__items__food', {
         }
     }
 });
-$(document).ready(function() {
-$("a.scrollto").click(function () {
-    $('.header__menu-button').removeClass('active');
-    $('.header__menu__mobile').css({'visibility':'hidden','opacity':'0'});
-var elementClick = $(this).attr("href")
-var destination = $(elementClick).offset().top;
-jQuery("html:not(:animated),body:not(:animated)").animate({scrollTop: destination}, 800);
-return false;
-});
+$(document).ready(function () {
+    $("a.scrollto").click(function () {
+        $('.header__menu-button').removeClass('active');
+        $('.header__menu__mobile').css({ 'visibility': 'hidden', 'opacity': '0' });
+        var elementClick = $(this).attr("href")
+        var destination = $(elementClick).offset().top;
+        jQuery("html:not(:animated),body:not(:animated)").animate({ scrollTop: destination }, 800);
+        return false;
+    });
 });
 new Swiper('.reviews__slider__content', {
     slidesPerView: 1,
     autoplay: {
         delay: 2000,
-      },
+    },
     pagination: {
         el: '.swiper-pagination',
     },
@@ -1297,18 +1297,18 @@ new Swiper('.reviews__slider__content', {
         }
     }
 });
-$('.modal__open').click(function(){
-    $('.modal__container').css({'display':'flex'});
+$('.modal__open').click(function () {
+    $('.modal__container').css({ 'display': 'flex' });
 });
-$('.modal__close').click(function(){
-    $('.modal__container').css({'display':'none'});
+$('.modal__close').click(function () {
+    $('.modal__container').css({ 'display': 'none' });
 });
-$('.quetions_item').click(function(){
+$('.quetions_item').click(function () {
     let status = $(this).data('quetions');
-    $('.quetions__list__text__item').each(function(){
-        if($(this).data('quetions') == status){
-            $('.quetions__list__text__item').css({'display':'none'});
-            $(this).css({'display':'block'});
+    $('.quetions__list__text__item').each(function () {
+        if ($(this).data('quetions') == status) {
+            $('.quetions__list__text__item').css({ 'display': 'none' });
+            $(this).css({ 'display': 'block' });
         }
     });
 });
@@ -1336,6 +1336,27 @@ $('.calculator__time__container .calculator__button').click(function () {
     let numberSumm = $(this).data('summ');
     let summ = dayZakaz * numberSumm;
     $('.summ__tovar').html(summ);
+    if (dayZakaz < 18) {
+        $('.calculator__menu__sum__skidka').css({ 'display': 'none' });
+    }
+    if (dayZakaz === 18) {
+        $('.calculator__menu__sum__skidka').css({ 'display': 'flex' });
+        let numberSumm = $(this).data('summ');
+        let summ = dayZakaz * numberSumm;
+        let summProc = summ / 100 * 5;
+        summ = summ + summProc;
+        $('.calculator__menu__sum__skidka .summ__tovar').html(Math.trunc(summ));
+    }
+    else {
+        if (dayZakaz > 18) {
+            $('.calculator__menu__sum__skidka').css({ 'display': 'flex' });
+            let numberSumm = $(this).data('summ');
+            let summ = dayZakaz * numberSumm;
+            let summProc = summ / 100 * 7;
+            summ = summ + summProc;
+            $('.calculator__menu__sum__skidka .summ__tovar').html(Math.trunc(summ));
+        }
+    }
 });
 $('.quetions_item').click(function () {
     $('.quetions_item').removeClass('active__quetion');
@@ -1344,7 +1365,7 @@ $('.quetions_item').click(function () {
 
 /*Клик на кнопку с калориями*/
 $('.calculatur__callory__buttons .calculator__button').click(function () {
-    $('.calculatur__callory__buttons .calculator__button').removeClass('active__button__calculator');
+    $('.calculator__button').removeClass('active__button__calculator');
     $(this).addClass('active__button__calculator');
     callorynumber = $(this).data('callorynumber');
     let fatsnumber = $(this).data('fats');
@@ -1367,12 +1388,15 @@ $('.calculatur__callory__buttons .calculator__button').click(function () {
                     $('.calculator__time__container').css({ 'display': 'none' });
                     $(this).css({ 'display': 'flex' });
                     $(this).find('.calculator__button').each(function (i) {
-                        if(i == 0){
+                        let dayZakaz = $(this).data('dayzakaz');
+                        if (i == 0) {
                             $(this).addClass('active__button__calculator');
-                            let dayZakaz = $(this).data('dayzakaz');
                             let numberSumm = $(this).data('summ');
                             let summ = dayZakaz * numberSumm;
                             $('.summ__tovar').html(summ);
+                        }
+                        if (dayZakaz < 18) {
+                            $('.calculator__menu__sum__skidka').css({ 'display': 'none' });
                         }
                     })
                 }
@@ -1404,12 +1428,15 @@ $('.calculator__nav__link__item').click(function () {
                     $('.calculator__time__container').css({ 'display': 'none' });
                     $(this).css({ 'display': 'flex' })
                     $(this).find('.calculator__button').each(function (i) {
-                        if(i == 0){
+                        let dayZakaz = $(this).data('dayzakaz');
+                        if (i == 0) {
                             $(this).addClass('active__button__calculator');
-                            let dayZakaz = $(this).data('dayzakaz');
                             let numberSumm = $(this).data('summ');
                             let summ = dayZakaz * numberSumm;
                             $('.summ__tovar').html(summ);
+                        }
+                        if (dayZakaz < 18) {
+                            $('.calculator__menu__sum__skidka').css({ 'display': 'none' });
                         }
                     })
                 }
