@@ -1305,7 +1305,7 @@ b {
         color: #32bf5d;
         background-color: transparent;
         border: 2px solid transparent;
-        z-index: 200;
+        z-index: 10;
     }
 
     .ico--m {
