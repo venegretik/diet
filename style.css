@@ -1155,11 +1155,18 @@ b {
 }
 .title__menu__content{
     display:flex;
+    position: relative;
     justify-content:center;
 }
 .title__menu__content img{
     max-height:400px;
+    width: 100%;
     margin:0px auto;
+}
+.title__menu__content .modal__open{
+    position: absolute;
+    left: 100px;
+    bottom: 50px;
 }
 .header__row__contact .cart-contents{
     margin-top: 0px!important;
@@ -1457,6 +1464,11 @@ b {
         background-image: none;
     }
 
+    .title__menu__content .modal__open{
+        position: absolute;
+        left: 0px;
+        bottom: 25px;
+    }
     .modal__form form {
         flex-basis: 100%;
         width: 100%;
