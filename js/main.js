@@ -1249,6 +1249,7 @@ $('.header__menu-button').click(function(){
 });
 new Swiper('.title__menu__container',{
     slidesPerView: 1,
+    loop: true,
     autoplay: {
         delay: 4000,
       },
