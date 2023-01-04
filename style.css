@@ -988,8 +988,15 @@ b {
 
 .calculator__menu__sum__skidka {
     display: flex;
+    text-decoration: line-through;
 }
-
+.footer__text{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    font-size: 12px;
+}
 .calculator__menu__sum b {
     font-size: 24px;
 }
@@ -1084,6 +1091,7 @@ b {
 
 .footer__col {
     flex-basis: 35%;
+    align-items: center;
     display: flex;
     justify-content: space-between;
 }
